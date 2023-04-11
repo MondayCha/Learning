@@ -12,3 +12,10 @@ FROM title_ids AS t
     INNER JOIN people AS p ON p.person_id = c.person_id
 WHERE c.category = 'director'
 ORDER BY name;
+/*
+ SELECT p.name
+ FROM crew AS c
+ INNER JOIN people AS p ON p.person_id = c.person_id
+ WHERE p.name like 'Rose%'
+ AND c.category = 'actress'
+ AND p.name NOT LIKE 'Rose %'
